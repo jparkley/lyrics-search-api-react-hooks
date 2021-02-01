@@ -1,7 +1,0 @@
-# dependencies
-/node_modules
-
-# misc
-/build
-.env
-test.html
