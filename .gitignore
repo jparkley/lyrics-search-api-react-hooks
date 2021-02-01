@@ -1,5 +1,6 @@
 node_modules
 .env
 test.html
-dist
+dist/
 public/*.gif
+previewDist.js

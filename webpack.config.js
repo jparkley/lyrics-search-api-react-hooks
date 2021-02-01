@@ -38,7 +38,10 @@ const config = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: "file-loader"
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]"
+            }
           }
         ]
       }
@@ -60,9 +63,9 @@ if (currentTask == "webpackBuild" || currentTask == "build") {
   config.plugins.push(new CleanWebpackPlugin(), new RunAfterCompile())
   config.mode = "production"
   config.output = {
-    publicPath: "/",
+    publicPath: "./",
     path: path.resolve(__dirname, "dist"),
-    filename: "bundled.[hash].js",
+    filename: "bundled.js",
     chunkFilename: "[name].[chunkhash].js"
   }
 }
