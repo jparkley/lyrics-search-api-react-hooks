@@ -1,5 +1,3 @@
-# lyrics-search-api-react-hooks
-Lyric Search from Musixmatch.com via Axios API call in React.  Using hooks: useReducer, useEffect, useContext
 
 # Lyric Search App in React Hooks
 - Fecthing top tracks from Musixmatch.com on landing.  
