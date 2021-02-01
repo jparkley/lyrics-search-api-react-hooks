@@ -64,6 +64,7 @@ function App() {
     dispatch({ type: "SEARCH_START" })
     async function fetchTracks() {
       try {
+        //console.log("key:", process.env.MM_KEY)
         const response = await Axios.get(`https://cors-access-allow.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=30&country=us&f_has_lyrics=1&apikey=${process.env.MM_KEY}`)
         console.log("top tracks: ", response)
         if (response) {
