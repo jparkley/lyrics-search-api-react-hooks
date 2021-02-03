@@ -4,6 +4,7 @@ const Dotenv = require("dotenv-webpack")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const fse = require("fs-extra")
+console.log("config:", currentTask)
 
 class RunAfterCompile {
   apply(compiler) {

@@ -45,7 +45,8 @@ function Lyrics() {
     const ourRequest = Axios.CancelToken.source()
     async function fetchLyrics() {
       try {
-        const response = await Axios.get(`https://cors-access-allow.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${trackId}&apikey=${process.env.MM_KEY}`)
+        //const response = await Axios.get(`https://cors-access-allow.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${trackId}&apikey=${process.env.MM_KEY}`)
+        const response = await Axios.get(`https://cors-access-allow.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${trackId}&apikey=96d992b7c28874271070d7ea55e2a9c8`)
 
         if (response.status === 200 && response.data.message.body.lyrics.lyrics_body != "") {
           dispatch({ type: "LYRICS", value: response.data.message.body.lyrics })

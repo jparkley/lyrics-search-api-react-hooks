@@ -14,7 +14,8 @@ function Search() {
     setLoading(true)
     async function fetchTracks() {
       try {
-        const response = await Axios.get(`https://cors-access-allow.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q_track=${searchTerm}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.MM_KEY}`)
+        //const response = await Axios.get(`https://cors-access-allow.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q_track=${searchTerm}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.MM_KEY}`)
+        const response = await Axios.get(`https://cors-access-allow.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q_track=${searchTerm}&page_size=10&page=1&s_track_rating=desc&apikey=96d992b7c28874271070d7ea55e2a9c8`)
         console.log("in search: ", response)
 
         if (response) {

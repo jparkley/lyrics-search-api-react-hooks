@@ -65,7 +65,9 @@ function App() {
     async function fetchTracks() {
       try {
         console.log("key:", process.env.MM_KEY)
-        const response = await Axios.get(`https://cors-access-allow.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=30&country=us&f_has_lyrics=1&apikey=${process.env.MM_KEY}`)
+        //const response = await Axios.get(`https://cors-access-allow.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=30&country=us&f_has_lyrics=1&apikey=${process.env.MM_KEY}`)
+        //Due to Netlify env variable error
+        const response = await Axios.get(`https://cors-access-allow.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=30&country=us&f_has_lyrics=1&apikey=96d992b7c28874271070d7ea55e2a9c8`)
         console.log("top tracks: ", response)
         if (response) {
           if (response.data.message.header.status_code == 401) {
